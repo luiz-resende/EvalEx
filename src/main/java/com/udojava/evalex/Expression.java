@@ -1549,7 +1549,8 @@ public class Expression {
                         }
 
                         public String getString() {
-                            return token.surface;
+                        	LazyNumber lazyVariable = variables.get(token.surface);
+                            return lazyVariable.getString();
                         }
                     });
                     break;
